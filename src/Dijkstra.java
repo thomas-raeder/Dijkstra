@@ -40,6 +40,8 @@ public class Dijkstra {
         knoten.toFirst();
         while (knoten.hasAccess()) {
             DijkstraVertex djk = (DijkstraVertex)knoten.getContent();
+            djk.setVorgaenger(null);
+            djk.setDistanz(-1);
             djk.setMark(false);
             knoten.next();
         }

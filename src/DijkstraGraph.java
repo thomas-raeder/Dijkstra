@@ -61,7 +61,7 @@ public class DijkstraGraph {
         d.findeKuerzestenWegDijkstra(startID,zielID);
         List<Vertex> list = d.gibRoute();
         list.toFirst();
-        String out = "";
+        String out = "Der Weg von " + startID + " nach " + zielID + " lautet: \n";
         while(list.hasAccess()){
             out = out + list.getContent().getID() + " ";
             list.next();
